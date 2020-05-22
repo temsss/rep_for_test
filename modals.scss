@@ -1,0 +1,600 @@
+.modal.fade .modal-dialog {
+  transform: translate(0, -75%);
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0, -50%);
+}
+
+.modal-header {
+  position: relative;
+  display: flex;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  border-bottom: none;
+  background-color: #555;
+  color: $darkBackground;
+  z-index: 11;
+
+
+  /*.close {
+    padding: 1rem;
+    margin: -3rem -2.3rem 0rem auto;
+    position: relative;
+    top: 0;
+    color: #80808073;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+    font-size: 3.5rem;
+    cursor: pointer;
+  }*/
+
+  h5 {
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    color: $darkBackground;
+
+    @media (min-width: $mobileWidth) {
+      font-size: 2.36rem; //34px
+    }
+
+    span {
+      color: $red;
+    }
+
+    .ct-position-text {
+      color: $gray;
+      margin-top: 5px;
+      font-size: 1rem;
+      line-height: 0.5;
+
+      @media (min-width: $mobileWidth) {
+        font-size: 1.18rem; //17px
+        line-height: 1.2;
+      }
+    }
+  }
+
+  h5.active {
+    color: $darkBackground;
+  }
+
+  .ct-certificates {
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (min-width: $mobileWidth) {
+      right: 5.56rem;
+    }
+  }
+
+  .ct-certificate {
+    height: 40px;
+    margin-right: 10px;
+
+    @media (min-width: $mobileWidth) {
+      height: 4rem;
+      margin-right: 10px;
+    }
+
+    @media (min-width: $tabletWidth) {
+      height: 5rem;
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  //margin-top: 30px;
+  background-color: transparent;
+
+  @media (min-width: $mobileWidth) {
+    margin-top: 0;
+
+    .owl-stage-outer {
+      margin-bottom: 30px !important;
+    }
+  }
+
+  .owl-stage-outer {
+    margin-bottom: 0 !important;
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  padding: 0;
+  width: 90vw;
+  overflow: hidden;
+  margin-top: 16px;
+
+  @media (min-width: $mobileWidth) {
+    width: 80vw;
+    max-width: 1100px;
+    //height: 90vh;
+    max-height: 100vh;
+    margin-top: 0;
+  }
+
+  .ct-white-borders {
+    width: 18px;
+    height: 100%;
+  }
+
+  .ct-border-left {
+    border-right: 2px solid $lightGray;
+  }
+
+  .ct-border-right {
+    border-left: 2px solid $lightGray;
+  }
+}
+
+.modal-body {
+  padding: 0;
+
+  .row {
+    margin: 0;    
+    height: 63rem;
+    min-height: 48rem;
+    max-height: 80vh;
+
+    @media (min-width: $mobileWidth) {
+      height: auto;
+      min-height: auto;
+      max-height: auto;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .ct-modal-left {
+    background: url(../images/body-bg.jpg) #353639 repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: background .3s, transform .2s linear .2s;
+    z-index: 150;
+
+    height: 18rem;
+
+    .modal.show & {
+      transform: translateY(0);
+    }
+
+    @media (min-width: $mobileWidth) {
+      //background: url(../images/body-bg.jpg) #353639 repeat;
+      position: absolute;
+      left: 0;
+      right: auto;
+      height: 100%;
+      transform: none;
+    }
+  }
+
+  .ct-modal-right {
+    background: url(../images/body-bg.jpg) #353639 repeat;
+    order: -1;
+    height: 45rem;
+
+    @media (min-width: $mobileWidth) {
+      order: 0;
+      margin-left: 50%;
+      padding: 56.4% 0 0;
+      height: auto;
+    }
+
+    img[srcset*=empty-userpic] {
+      width: 70%;
+      margin: -10% 15% 0 15%;
+      z-index: 10;
+    }
+  }
+
+  .ct-modal-image {
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    //background: url(../images/body-bg.jpg) #353639 top center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: all 1.5s ease;
+
+    @media (min-width: $mobileWidth) {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+
+    > button {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+  }
+
+  .tab-content {
+    transition: height .2s linear;
+
+    #pills-hobbies {
+      margin-top: -5px;
+    }
+
+    @media (min-width: $mobileWidth) {
+      #pills-hobbies {
+        margin-top: 1.3rem;
+      }
+
+      #pills-skills {
+        margin-top: -1rem;
+      }
+    }
+
+    > .tab-pane {
+      display: block;
+      overflow: hidden;
+      height: 0;
+      opacity: 0;
+      transition: opacity 0.2s;
+
+      &.active {
+        height: auto;
+        opacity: 1;
+        transition: opacity 0.2s;
+
+        .progress-bar {
+          transition: width 0.5s ease;
+        }
+
+        .owl-item:first-child {
+          .ct-progress-block {
+            &:first-child .progress-bar {
+              transition-delay: 0.2s;
+            }
+
+            &:nth-child(2) .progress-bar {
+              transition-delay: 0.3s;
+            }
+
+            &:nth-child(3) .progress-bar {
+              transition-delay: 0.4s;
+            }
+
+            &:last-child .progress-bar {
+              transition-delay: 0.5s;
+            }
+          }
+        }
+
+        .owl-item:last-child {
+          .ct-progress-block {
+            &:first-child .progress-bar {
+              transition-delay: 0.6s;
+            }
+
+            &:nth-child(2) .progress-bar {
+              transition-delay: 0.7s;
+            }
+
+            &:nth-child(3) .progress-bar {
+              transition-delay: 0.8s;
+            }
+
+            &:last-child .progress-bar {
+              transition-delay: 0.9s;
+            }
+          }
+        }
+      }
+
+      &:not(.active) .progress-bar {
+        width: 0 !important;
+      }
+    }
+  }
+
+  .ct-hobbies-list {
+    padding-left: 0;
+    font-size: 1.11rem;
+    line-height: 1.7;
+    color: #fff;
+    margin-left: 0;
+    font-weight: 600;
+    list-style: none;
+    //margin-top: 33px;
+
+    li {
+      line-height: 2.2;
+    }
+
+    li:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .owl-carousel .owl-dots {
+      display: block;
+    }
+
+    .owl-item {
+      > div {
+        display: grid;
+        grid: 1fr 1fr / 1fr 1fr;
+        grid-column-gap: 20px;
+      }
+    }
+  }
+}
+
+#teamModal:not(.show) {
+  .progress-bar {
+    width: 0 !important;
+  }
+}
+
+.ct-modal-nav {
+  margin: 2rem 2.5rem;
+
+  @media (min-width: $mobileWidth) {
+    margin: 3rem 5.59rem;
+  }
+
+  .nav-item {
+    font-size: 1.18rem; //17px
+    font-weight: 600;
+  }
+
+  .nav-link {
+    border-bottom: 3px solid $grayBorder;
+    border-radius: 0;
+    color: #999;
+  }
+
+  .nav-link.active, .show > .nav-link {
+    background-color: transparent;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+  }
+
+  .nav-pills {
+    margin-bottom: 1.5rem;
+
+    .nav-item:nth-child(1) .nav-link {
+      padding-left: 2px;
+    }
+
+    .nav-item:nth-child(2) .nav-link {
+      padding-left: 20px;
+    }
+  }
+}
+
+.ct-night {
+  .ct-image-night {
+    opacity: 1;
+    transition: all 2s ease;
+  }
+}
+
+.ct-day {
+  .ct-image-day {
+    opacity: 1;
+    transition: all 1.5s ease;
+  }
+
+  .owl-dots > button {
+    background: $grayBorder;
+
+    &.active {
+      background: #fff;
+    }
+  }
+}
+
+@media (min-width: $mobileWidth) {
+  .tab-content {
+    .owl-carousel {
+      .owl-stage, .owl-item {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.ct-close-modal {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 1059;
+  cursor: pointer;
+  top: 9px;
+  right: -6px;
+
+  @media (min-width: $mobileWidth) {
+    top: 35px;
+    right: 35px;
+  }
+}
+
+.ct-close-modal :hover {
+  opacity: 1;
+}
+
+.ct-close-modal:before, .ct-close-modal:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 30px;
+  width: 2px;
+  background-color: #fff;
+
+  @media (min-width: $mobileWidth) {
+    height: 42px;
+  }
+}
+
+.ct-close-modal:before {
+  transform: rotate(45deg);
+}
+
+.ct-close-modal:after {
+  transform: rotate(-45deg);
+}
+
+.pageWrapper {
+  .ct-close-modal {
+    display: none;
+  }
+}
+
+.modal-open {
+    overflow-y: auto;
+    padding-right: 0 !important;
+}
+
+.modal-open .modal {
+    overflow: hidden;
+}
+
+.pageWrapper.modal-open {
+    .ct-close-modal {
+        display: block;
+    }
+}
+
+.ct-progress-block {
+  font-weight: 600;
+  font-size: 1.11rem; //16px
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.tab-pane.active .ct-progress-block {
+  @media (min-width: $mobileWidth) {
+    margin-top: 1.7rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+}
+
+.ct-proress-bar {
+  background: #585858;
+  height: 3px;
+  margin-top: 10px;
+}
+
+.modal-backdrop.show {
+  opacity: .7;
+}
+
+#positionModal, #serviceModal, #contactUsModal {
+    .ct-contact-us {
+        background: none;
+
+        .ct-form-button {
+            position: relative;
+
+            input {
+                width: 100%;
+            }
+
+            .ct-arrow-right-btn:before {
+                @media (min-width: $mobileWidth) {
+                    margin-top: 3rem + 1.5rem;
+                }
+            }
+        }
+    }
+
+    .modal-body {
+        background: url(../images/body-bg.jpg) $darkBackground repeat;
+        padding: 2rem 2.5rem;
+
+        @media (min-width: $mobileWidth) {
+            padding: 3.32rem 5.56rem;
+        }
+    }
+
+    .ct-position-title::last-word {
+        color: $red;
+    }
+}
+
+#positionModal, #contactUsModal {
+  .modal-dialog {
+    @media (min-width: $mobileWidth) {
+      width: 45.51rem;
+      max-width: 650px;
+      min-width: 350px;
+    }
+  }
+
+  .modal-body {
+    @media (min-width: $mobileWidth) {
+      padding: 3.32rem 5.56rem;
+    }
+  }
+
+  textarea {
+    height: 11rem;
+
+    @media (min-width: $mobileWidth) {
+      height: 5.8rem;
+    }
+  }
+}
+
+#serviceModal {
+  .modal-dialog {
+    max-width: 940px;
+    width: 55rem;
+  }
+
+  .modal-body {
+    font-size: 1.6rem;
+    line-height: 2.1;
+    color: #c5c5c5;
+  }
+}
+
+.ct-loader-shown {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: "";
+    background: #15191f url('../images/loader.gif') center no-repeat;
+  }
+}

@@ -1,0 +1,365 @@
+.ct-mainpage {
+  .section01 {
+    background: url(../images/body-bg.jpg) $darkBackground repeat fixed;
+    overflow: hidden;
+    z-index: 2;
+
+    .col-lg-12 {
+      padding: 0;
+    }
+
+    .button a {
+      background-color: rgba(37, 38, 41, 0.6);
+    }
+  }
+
+  .ct-products-block {
+    @media (min-width: $mobileWidth) {
+      .ct-count {
+        text-align: left;
+        margin-left: 20rem;
+      }
+    }
+
+    .owl-stage {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .ct-product {
+      display: grid;
+      grid-template-rows: 110px 1fr;
+      height: 100%;
+      padding: 6.94rem 4.16rem;
+      background-color: #212226;
+
+      @media (min-width: $mobileWidth) and (max-width: 1200px) {
+        grid-template-rows: 80px 1fr;
+      }
+
+      @media (min-width: $mobileWidth) {
+        &:hover {
+          background-color: #ffffff;
+
+          .ct-text-container, .ct-text-container .ct-gray-text {
+            color: #171515;
+          }
+        }
+      }
+    }
+
+    .ct-img-container {
+      display: flex;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h4 {
+      @media (min-width: 1201px) {
+        margin-top: 65px;
+      }
+
+      @media (max-width: 1200px) {
+        margin-top: 25px;
+      }
+
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 1.74rem; //25px
+      font-weight: 500;
+      line-height: 1.3;
+      text-align: left;
+    }
+
+    .ct-gray-text {
+      line-height: 2;
+      text-align: left;
+    }
+
+    @media (max-width: 575px) {
+      .owl-carousel {
+        padding-bottom: 8rem;
+      }
+
+      .owl-nav {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  .ct-link-list {
+    padding: 0;
+
+    li {
+      margin-bottom: 30px;
+      list-style-type: none;
+    }
+
+  }
+
+  .section02 {
+    h3 {
+      margin-top: 1.1rem;
+    }
+  }
+
+  .section04 {
+    h2 {
+      line-height: 1.308;
+      margin-bottom: 4rem;
+
+      span {
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+    }
+
+    h3 {
+      line-height: 1.514;
+      margin-top: 0.8rem;
+    }
+
+    .ct-text-container {
+      margin-bottom: 1.38rem;
+    }
+  }
+
+  .section05 {
+    .row {
+      position: relative;
+    }
+
+    h3 {
+      line-height: 1.514;
+      margin-top: 1rem;
+    }
+
+    .container-fluid + .container-fluid {
+      padding-top: 0;
+    }
+
+    h2 {
+      span {
+        @media (min-width: 992px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .section06 {
+    @media (max-width: 575px) {
+      .ct-border-container > div {
+        pointer-events: none;
+      }
+    }
+
+    h3 {
+      margin-top: 1rem;
+    }
+  }
+
+  #expertise {
+    ul {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 575px) {
+      .ct-text-header {
+        display: none;
+      }
+
+      .ct-team-carousel {
+        width: calc(100% - 7.5rem);
+      }
+
+      .owl-stage-outer {
+        width: 200%;
+      }
+    }
+
+    .ct-photos-block {
+      margin-top: 5.3rem;
+      padding-top: 3.8rem;
+      border-top: rgba(100, 100, 100, 0.4) 1px solid;
+
+      .owl-nav, .ct-count {
+        display: none;
+
+        @media (min-width: $mobileWidth) {
+          display: block;
+
+          &:empty {
+            margin: 0;
+            padding: 2.8rem;
+          }
+
+          &.disabled {
+            display: none;
+          }
+        }
+      }
+
+      h3 {
+        display: block;
+        float: left;
+        margin: 0;
+        font-size: 1.875rem; //27px
+        font-weight: 300;
+        line-height: 2.259;
+
+        @media (min-width: $mobileWidth) and (max-width: 1105px) {
+          line-height: 2;
+          max-width: 22rem;
+        }
+
+        @media (min-width: 1105px) {
+          line-height: 2.259;
+        }
+      }
+
+      .ct-count {
+        right: -7.5rem;
+
+        @media (min-width: $mobileWidth) and (max-width: 620px) {
+          margin-right: 11rem;
+        }
+
+        @media (min-width: 621px) {
+          margin-right: 13rem;
+        }
+      }
+
+      .owl-nav {
+        right: -7.5rem;
+
+        @media (min-width: $mobileWidth) {
+          right: 0;
+        }
+      }
+    }
+
+  }
+
+  .section08 {
+    .ct-padding-container .ct-cases-block-container {
+      @media (min-width: $mobileWidth) {
+        padding-top: 3rem !important;
+      }
+    }
+
+    > .ct-padding-container:nth-child(1) {
+      padding-bottom: 5rem;
+    }
+
+    .ct-cases-block {
+      .ct-cases-carousel .ct-position {
+        @media (min-width: $mobileWidth) {
+          margin-top: 6rem;
+        }
+      }
+
+      .ct-gallery {
+        margin-top: 2rem;
+
+        @media (min-width: $mobileWidth) {
+          margin-top: -4rem;
+        }
+      }
+
+      .ct-padding-container {
+        padding-top: 2rem;
+      }
+    }
+
+    .ct-position {
+      .ct-text-container {
+        div {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .ct-cases-block .ct-gallery {
+    margin-top: -0.8rem;
+  }
+
+  .ct-services-block {
+    h4 {
+      margin-bottom: 0;
+      min-height: 2rem;
+
+      @media (min-width: $tabletWidth) {
+        min-height: 4rem;
+      }
+    }
+  }
+
+  .ct-logos-carousel {
+    margin-top: 5rem;
+
+    .ct-count {
+      margin-left: 20rem;
+    }
+
+    @media (min-width: $mobileWidth) {
+      .owl-nav {
+        left: 0;
+        right: auto;
+      }
+
+      .ct-count {
+        text-align: left;
+      }
+    }
+  }
+
+  .ct-cases-block {
+    .ct-count {
+      position: absolute;
+
+      @media (min-width: $mobileWidth) {
+        left: 20rem;
+      }
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 0;
+  }
+
+  .section20 .ct-gallery {
+    margin-top: 0;
+  }
+
+  .ct-cases-block {
+    .owl-nav {
+      left: 0;
+    }
+  }
+}
+
+.ct-text-container, .ct-photos-block, .ct-cases-carousel {
+  .owl-stage-outer {
+    margin-bottom: 0 !important;
+  }
+}
+
+.ct-show-more-block {
+  .ct-services-block:hover {
+    cursor: pointer;
+    background: #fff;
+    transition: background-color .3s ease;
+    color: #212226;
+
+    .ct-text-container {
+      color: #212226;
+    }
+  }
+}
