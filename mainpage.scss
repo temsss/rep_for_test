@@ -17,7 +17,7 @@
     @media (min-width: $mobileWidth) {
       .ct-count {
         text-align: right;
-        margin-left: 20rem;
+        margin-left: 46rem;
       }
     }
 
@@ -31,7 +31,7 @@
       grid-template-rows: 110px 1fr;
       height: 100%;
       padding: 6.94rem 4.16rem;
-      background-color: #212226;
+      background-color: #333;
 
       @media (min-width: $mobileWidth) and (max-width: 1200px) {
         grid-template-rows: 80px 1fr;
