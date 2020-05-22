@@ -8,35 +8,8 @@
       padding: 12;
     }
 
-    .button a {
-      background-color: rgba(37, 38, 41, 0.6);
-    }
-  }
 
   .ct-products-block {
-
-    .owl-stage {
-      display: flex;
-      align-items: stretch;
-    }
-
-    .ct-product {
-      display: grid;
-      grid-template-rows: 110px 1fr;
-      height: 100%;
-      padding: 6.94rem 4.16rem;
-      background-color: #333;
-
-      @media (min-width: $mobileWidth) {
-        &:hover {
-          background-color: #111;
-
-          .ct-text-container, .ct-text-container .ct-gray-text {
-            color: #171515;
-          }
-        }
-      }
-    }
 
     .ct-img-container {
       display: flex;
