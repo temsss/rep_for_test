@@ -5,7 +5,7 @@
     z-index: 2;
 
     .col-lg-12 {
-      padding: 0;
+      padding: 12;
     }
 
     .button a {
@@ -14,12 +14,6 @@
   }
 
   .ct-products-block {
-    @media (min-width: $mobileWidth) {
-      .ct-count {
-        text-align: right;
-        margin-left: 20rem;
-      }
-    }
 
     .owl-stage {
       display: flex;
@@ -31,7 +25,7 @@
       grid-template-rows: 110px 1fr;
       height: 100%;
       padding: 6.94rem 4.16rem;
-      background-color: #212226;
+      background-color: #333;
 
       @media (min-width: $mobileWidth) and (max-width: 1200px) {
         grid-template-rows: 80px 1fr;
@@ -39,7 +33,7 @@
 
       @media (min-width: $mobileWidth) {
         &:hover {
-          background-color: #ffffff;
+          background-color: #111;
 
           .ct-text-container, .ct-text-container .ct-gray-text {
             color: #171515;
